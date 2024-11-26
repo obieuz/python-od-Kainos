@@ -14,11 +14,11 @@ class Ship:
         self.vector_x = 0
         self.vector_y = 0
         self.direction = 1
+        self.mass = settings.ship_mass
 
     def draw(self):
         settings.screen.blit(self.rotatedImage,
                              (self.x - settings.imageSize["x"] / 2, self.y - settings.imageSize["y"] / 2))
-        pygame.draw.circle(settings.screen, (255, 0, 0), (int(self.x), int(self.y)), 5)
 
     def motion(self):
         self.x += self.vector_x

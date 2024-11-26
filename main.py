@@ -24,16 +24,19 @@ while running:
     if pressed_keys[pygame.K_SPACE]:
         game.shoot()
 
+    if game.gravity_force():
+        running = False
+
     game.draw()
 
     if game.check_collision():
         running = False
-    clock.tick(60)
+    clock.tick(settings.fps)
 
 settings.screen.fill(settings.bg_color)
 settings.screen.blit(settings.game_over, (settings.max_width / 2 - settings.game_over_x / 2,
                                           settings.max_height / 2 - settings.game_over_y / 2))
 pygame.display.flip()
-time.sleep(2)
+time.sleep(1)
 
 pygame.quit()

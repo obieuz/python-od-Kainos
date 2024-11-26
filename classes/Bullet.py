@@ -11,22 +11,14 @@ class Bullet:
         self.y = y
         self.angle = angle
         self.direction = direction
+        self.mass = settings.bullet_mass
 
         self.vector_x, self.vector_y = functions.calculate_vectors(self.angle, settings.bullet_speed, self.direction)
 
     def draw(self):
-        x = self.x + settings.bullet_length * np.sin(self.angle)
-        y = self.y - settings.bullet_length * np.cos(self.angle)
+        vector_x, vector_y = functions.calculate_vectors(self.angle, settings.bullet_speed, self.direction)
 
-        if self.direction == 2:
-            x = self.x + settings.bullet_length * np.sin(self.angle) * -1
-        elif self.direction == 3:
-            x = self.x + settings.bullet_length * np.sin(self.angle) * -1
-            y = self.y + settings.bullet_length * np.cos(self.angle)
-        elif self.direction == 4:
-            y = self.y + settings.bullet_length * np.cos(self.angle)
-
-        pygame.draw.line(settings.screen, settings.bullet_color, (self.x, self.y), (x, y))
+        pygame.draw.line(settings.screen, settings.bullet_color, (self.x, self.y), (self.x + vector_x, self.y - vector_y))
 
     def move(self):
         self.x += self.vector_x

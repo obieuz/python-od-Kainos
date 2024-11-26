@@ -42,3 +42,9 @@ def calculate_vectors(angle, speed, direction):
     if direction == 3 or direction == 4:
         vector_y *= -1
     return vector_x, vector_y
+
+
+def check_borders(object):
+    if object.x > settings.max_width or object.x < 0 or object.y > settings.max_height or object.y < 0:
+        return True
+    return False
