@@ -36,7 +36,7 @@ blackhole_mass =3 * 1.989e30
 
 bullet_mass = 10
 
-blackhole_radius = 25
+blackhole_radius = 20
 
 radius_multiplayer = 6
 
