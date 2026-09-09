@@ -3,8 +3,8 @@ import pygame
 bg_color = (0, 18, 51)
 bullet_speed = 5
 
-count_aliens = 5
-count_blackholes = 2
+count_aliens = 10
+count_blackholes = 5
 
 fps = 60
 

@@ -1,5 +1,7 @@
 # Space Shooter 2D
 
+![zdjęcie gry](assets/zdjecie_gry.png)
+
 Klasyczna gra zręcznościowa typu "Top-Down Shooter" stworzona w języku Python. Projekt demonstruje praktyczne zastosowanie programowania obiektowego (OOP), trygonometrii do obliczania wektorów ruchu oraz implementację mechanik fizyki.
 
 ## Technologie
